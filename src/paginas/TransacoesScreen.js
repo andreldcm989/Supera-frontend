@@ -1,17 +1,17 @@
 import React, { Fragment } from "react";
-import Contas from "../componentes/Contas";
+import Transacoes from "../componentes/Transacoes";
 import Footer from "../componentes/footer/Footer";
 import Header from "../componentes/header/Header";
 import '../paginas/styles.css';
 
-const ContasScreen = () => {
+const TransacoesScreen = () => {
     return <Fragment>
         <Header/>
         <main className="main">
-            <Contas/>
+            <Transacoes/>
         </main>
         <Footer/>
     </Fragment>
 }
 
-export default ContasScreen;
+export default TransacoesScreen;
