@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
 import './App.css';
+import Rotas from './routes';
 
 function App() {
   return (
     <Fragment>
-      <h1>Hello!</h1>
-      <h1>Hello!</h1>
+      <Rotas/>
     </Fragment>
   );
 }

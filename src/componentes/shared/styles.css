@@ -1,0 +1,9 @@
+.card-home{
+    margin: 10px;
+    padding: 5px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+}

@@ -1,12 +1,14 @@
 import React from "react";
-import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import HomeScreen from "./paginas/HomeScreen";
 
-const Routes = () => (
+const Rotas = () => (
     <BrowserRouter>
-        <Switch>
-            <Route path='/home' component={`nenhum ainda`}/>
-        </Switch>
+        <Routes>
+            <Route path="/" element={<Navigate to="/home"/>} />
+            <Route path="/home" element={<HomeScreen />} />
+        </Routes>
     </BrowserRouter>
 )
 
-export default Routes
+export default Rotas;

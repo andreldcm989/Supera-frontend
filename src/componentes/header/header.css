@@ -1,0 +1,29 @@
+header{
+    padding: 20px;
+    width: 100vw;
+    height: 80px;
+    background-color: #041a97;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button{
+    margin: 5px;
+    height: 2rem;
+    width: 5rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.2s all ease-in-out;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+button:hover{
+    color: #041a97;
+    background-color: #FFFFFF;
+}
