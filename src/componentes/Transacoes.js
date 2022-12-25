@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import '../paginas/styles.css';
+import Filtros from "./FiltrosForm";
 
 const API = "http://localhost:8080/api/contas";
 
@@ -12,14 +13,21 @@ const api = async (idConta) => {
 
 const Transacoes = () => {
     const [transacoes, setTransacoes] = useState([]);
+    const [navegar, setNavegar] = useState(false);
 
     let { idConta } = useParams();
 
     useEffect(() => {
         api(idConta).then((dados) => {
             setTransacoes(dados);
+        }, error => {
+            setNavegar(true);
         })
     }, [])
+
+    if(navegar){
+        return <Navigate to="/" />
+    }
 
     if(transacoes.length === 0){
         return <Fragment>
@@ -29,6 +37,7 @@ const Transacoes = () => {
     }
     return <Fragment>
             <div className="lista-container">
+            <Filtros />
             <table className="lista-table">
                 <thead>
                     <tr>

@@ -22,9 +22,8 @@ const Contas = () => {
     }, [])
 
     return <Fragment>
-        <div className="contas-container">
-
-            <table className="contas-table">
+        <div className="lista-container">
+            <table className="lista-table">
                 <thead>
                     <tr>
                         <th>Id</th>
