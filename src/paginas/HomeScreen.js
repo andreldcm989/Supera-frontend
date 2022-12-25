@@ -5,12 +5,13 @@ import Card from "../componentes/shared/Card";
 import '../paginas/styles.css'
 
 const Home = () => {
-
+    
     return <Fragment>
         <Header/>
         <main className="main">
-            <Card src="teste" alt="teste" nome="Primeiro card"/>
-            <Card src="teste" alt="teste" nome="Primeiro card"/>
+            <Card link="/contas" src="teste" alt="teste" nome="Contas"/>
+            <Card link="/transacoes" src="teste" alt="teste" nome="Transações"/>
+            <Card link="/contas/abrirConta" src="teste" alt="teste" nome="Abrir Conta"/>
         </main>
         <Footer/>
     </Fragment>

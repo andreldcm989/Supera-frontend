@@ -6,4 +6,17 @@
     display: flex;
     border: 1px solid black;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #041a97;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.card-home:hover{
+    background-color: #041a97;
+    opacity: 0.8;
+    color: #FFFFFF;
 }

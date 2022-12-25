@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import '../shared/styles.css'
 
 const Card = (props) => {
-    return <div className="card-home">
-        <img src={props.src} alt={props.alt} />
-        <h3>{props.nome}</h3>
-    </div>
+
+    return <Link to={props.link}>
+        <div className="card-home">
+            <img src={props.src} alt={props.alt} />
+            <h3>{props.nome}</h3>
+        </div>
+    </Link>
 }
 
 export default Card;
