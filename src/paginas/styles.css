@@ -59,3 +59,22 @@ tr, th, td{
     height: 30px;
     cursor: pointer;
 }
+
+.botoes{
+    margin: 25px;
+    height: 40px;
+    width: 5rem;
+    background-color: transparent;
+    border: 1px solid #041a97;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.2s all ease-in-out;
+    color: #041a97;
+    cursor: pointer;
+}
+
+.botoes:hover{
+    color: #FFFFFF;
+    background-color: #041a97;
+}

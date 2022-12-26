@@ -34,7 +34,7 @@ const Transacoes = () => {
         return <Fragment>
             <div className="lista-vazia">
                 <h2>Nenhuma Transação foi realizada.</h2>
-                <input type="button" name="transacao" value="Nova Transação" onClick={() => navigate(`/contas/${idConta}/transacoes/novaTransacao`)} />
+                <input className="botoes" type="button" name="transacao" value="Nova Transação" onClick={() => navigate(`/contas/${idConta}/transacoes/novaTransacao`)} />
             </div>
         </Fragment>
     }

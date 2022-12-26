@@ -94,7 +94,7 @@ const NovaTransacao = () => {
                     {transferencia()}
                     <div className="campos">
                         <label htmlFor="valor">Valor (R$) </label>
-                        <input name="valor" type="number" min="1" value={Number.parseFloat(campos.valor)} onChange={escutaCampos} required />
+                        <input name="valor" type="number" min="1" step="0.01" value={Number.parseFloat(campos.valor)} onChange={escutaCampos} required />
                     </div>
                     <div className="campos">
                         <button type="submit" className="botoes">Efetuar Transação</button>
