@@ -9,7 +9,7 @@ header{
     justify-content: space-between;
 }
 
-button{
+.nav-button{
     margin: 5px;
     height: 2rem;
     width: 5rem;
@@ -23,7 +23,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.nav-button:hover{
     color: #041a97;
     background-color: #FFFFFF;
 }

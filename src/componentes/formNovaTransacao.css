@@ -1,0 +1,32 @@
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 600px;
+    height: 400px;
+    padding: 10px;
+}
+
+h2{
+    margin: 10px;
+    text-align: center;
+}
+#tipo{
+    display: none;
+}
+
+.campos{
+    display: flex;
+    width: 400px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    margin: 0;
+}
+
+.botoes{
+    color: blue;
+}

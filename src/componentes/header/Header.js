@@ -9,13 +9,10 @@ const Header = () => {
             <h2>Bankline Supera</h2>
             <nav>
                 <Link to="/">
-                    <button >Home</button>
+                    <button className="nav-button">Home</button>
                 </Link>
                 <Link to="/contas">
-                    <button >Contas</button>
-                </Link>
-                <Link to="/transacoes">
-                    <button >Transações</button>
+                    <button className="nav-button">Contas</button>
                 </Link>
             </nav>
         </header>

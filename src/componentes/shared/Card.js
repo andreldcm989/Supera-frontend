@@ -6,7 +6,6 @@ const Card = (props) => {
 
     return <Link to={props.link}>
         <div className="card-home">
-            <img src={props.src} alt={props.alt} />
             <h3>{props.nome}</h3>
         </div>
     </Link>

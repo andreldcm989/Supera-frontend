@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import '../paginas/styles.css';
 import Filtros from "./FiltrosForm";
 
@@ -16,6 +16,7 @@ const Transacoes = () => {
     const [navegar, setNavegar] = useState(false);
 
     let { idConta } = useParams();
+    let navigate = useNavigate();
 
     useEffect(() => {
         api(idConta).then((dados) => {
@@ -25,19 +26,22 @@ const Transacoes = () => {
         })
     }, [])
 
-    if(navegar){
+    if (navegar) {
         return <Navigate to="/" />
     }
 
-    if(transacoes.length === 0){
+    if (transacoes.length === 0) {
         return <Fragment>
-            <h2>Nenhuma Transação foi realizada.</h2>
-            <button>Nova Transação</button>
+            <div className="lista-vazia">
+                <h2>Nenhuma Transação foi realizada.</h2>
+                <input type="button" name="transacao" value="Nova Transação" onClick={() => navigate(`/contas/${idConta}/transacoes/novaTransacao`)} />
+            </div>
         </Fragment>
     }
     return <Fragment>
-            <div className="lista-container">
+        <div className="lista-container">
             <Filtros />
+            <input type="button" name="transacao" value="Nova Transação" onClick={() => navigate(`/contas/${idConta}/transacoes/novaTransacao`)} />
             <table className="lista-table">
                 <thead>
                     <tr>
@@ -54,7 +58,7 @@ const Transacoes = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {transacoes.map((transacao, index) => 
+                    {transacoes.map((transacao, index) =>
                         <tr key={index}>
                             <td>{transacao.idConta}</td>
                             <td>{transacao.dataOperacao}</td>

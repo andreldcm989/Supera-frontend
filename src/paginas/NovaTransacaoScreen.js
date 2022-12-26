@@ -1,18 +1,17 @@
 import React, { Fragment } from "react";
+import NovaTransacao from "../componentes/NovaTransacao";
 import Footer from "../componentes/footer/Footer";
 import Header from "../componentes/header/Header";
-import Card from "../componentes/shared/Card";
 import '../paginas/styles.css';
 
-const Home = () => {
-    
+const NovaTransacaoScreen = () => {
     return <Fragment>
         <Header/>
         <main className="main">
-            <Card link="/contas" nome="Contas"/>
+            <NovaTransacao/>
         </main>
         <Footer/>
     </Fragment>
 }
 
-export default Home;
+export default NovaTransacaoScreen;
